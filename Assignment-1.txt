@@ -1,0 +1,12 @@
+#Step-1: To start an nginx container with port forwarded to local 8085 in detached mode and named as nginx-container-1, run the following command:
+docker run --name nginx-container-1 -p 8085:80 -d nginx
+#Step-2: To check if the nginx container is running with correct port forwarding, open your browser with the following url: 
+http://localhost:8085/
+#Step-3: To check logs, run the following command:
+docker logs nginx-container-1
+#Step-4: To enter inside the container, run the following exec command to use the interactive mode:
+docker exec -it nginx-container-1
+#Step-5: In order to exit fron the interactive mode, type exit
+exit
+Step-6: To stop the container, run the following command:
+docker stop nginx-container-1
